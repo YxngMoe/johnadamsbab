@@ -1,14 +1,11 @@
 # johnadamsbab
 
-import pandas as pd
+The neural network model was subjected to a series of systematic alterations in the conducted trials, each of which revealed unique effects on its performance. The first model, which had two hidden layers and followed notebook construction guidelines, demonstrated respectable accuracy rates on test, validation, and training datasets. Reducing the batch size to 64 revealed an unexpected improvement in accuracy, defying the popular belief that bigger batch sizes are preferable. Increasing the number of epochs to 200 subsequently led to much higher accuracy levels, confirming the intuitive belief that longer exposure to the training data improves the model's processing speed. But this rising tendency peaked, highlighting the need for an ideal epoch threshold. Interestingly, albeit less dramatically than with other interventions, the inclusion of a third hidden layer produced gains.
 
-# Replace these placeholders with your actual accuracy values
-data = {
-    'Experiment': ['Base Model', 'Batch 64 Model', 'Epoch 200 Model', '3 Hidden Layers Model'],
-    'Train Accuracy': [94.56, 96.38, 99.82, 95.41],
-    'Validation Accuracy': [94.98, 96.14, 97.50, 95.48],
-    'Test Accuracy': [94.63, 95.88, 97.72, 95.39],
-}
 
-df = pd.DataFrame(data)
-df
+
+
+
+
+
+
