@@ -1,3 +1,1 @@
-up
-
-mongoimport --port 27017 --db AAC --collection animals --type csv --headerline --file /usr/local/datasets/aac_shelter_outcomes.csv
+mongoimport --db AAC --collection animals --type csv --headerline --file aac_shelter_outcomes.csv
