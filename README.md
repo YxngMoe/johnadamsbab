@@ -1,3 +1,1 @@
-screw
-
-mongoimport --db AAC --collection animals --type csv --headerline --file /usr/local/datasets/aas_shelter_outcomes.csv
+mongoimport --db AAC --collection animals --type csv --headerline --file aac_shelter_outcomes.csv
