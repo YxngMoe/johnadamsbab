@@ -1,20 +1,10 @@
-class CRUDOperations:
-    def __init__(self):
-        # Placeholder for demonstration purposes
-        self.username = ""
-        self.password = ""
-        self.database_name = ""
-        self.collection_name = ""
+# Import your CRUD module
+from crud_operations import CRUDOperations
 
-    def create_document(self, data):
-        # Placeholder for create_document method
-        print(f"Creating document in {self.database_name}.{self.collection_name}:", data)
-        return "Simulated create success"
-
-    def read_documents(self, query):
-        # Placeholder for read_documents method
-        print(f"Reading documents from {self.database_name}.{self.collection_name} with query:", query)
-        return "Simulated read result"
+username = "aacuser"
+password = "your_password"
+database_name = "AAC"
+collection_name = "animals"
 
 crud_instance = CRUDOperations()
 
