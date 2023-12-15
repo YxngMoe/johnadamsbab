@@ -1,34 +1,20 @@
-from mongodb_crud import MongoDBCrud
+from crud_operations import CRUDOperations
 
-# MongoDB connection parameters
-username = "your_username"
+# Set your MongoDB credentials and database/collection names
+username = "aacuser"
 password = "your_password"
-host = "localhost"
-port = 27017
-database = "your_database"
+database_name = "AAC"
+collection_name = "animals"
 
+# Instantiate the CRUDOperations class
+crud_instance = CRUDOperations(username, password, database_name, collection_name)
 
-mongo_crud = MongoDBCrud(username, password, host, port, database)
+# Test Create Operation
+data_to_insert = {"name": "Fluffy", "type": "Cat", "age": 3}
+create_result = crud_instance.create_document(data_to_insert)
+print(f"Create Operation Result: {create_result}")
 
-
-collection = "your_collection"
-
-document = {"name": "John", "age": 30}
-create_result = mongo_crud.create_document(collection, document)
-print("Create Result:", create_result)
-
-
-query = {"name": "John"}
-read_result = mongo_crud.read_documents(collection, query)
-print("Read Result:", read_result)
-
-
-query = {"name": "John"}
-update_data = {"age": 31}
-update_result = mongo_crud.update_documents(collection, query, update_data)
-print("Update Result:", update_result)
-
-
-query = {"name": "John"}
-delete_result = mongo_crud.delete_documents(collection, query)
-print("Delete Result:", delete_result)
+# Test Read Operation
+read_query = {"type": "Cat"}
+read_result = crud_instance.read_documents(read_query)
+print(f"Read Operation Result: {read_result}")
